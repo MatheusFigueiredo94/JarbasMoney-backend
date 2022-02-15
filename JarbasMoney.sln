@@ -6,12 +6,23 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JarbasMoney.Domain", "JarbasMoney.Domain\JarbasMoney.Domain.csproj", "{23C8A953-19C7-40F4-903D-53E8BA015C35}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JarbasMoney.Infra", "JarbasMoney.Infra\JarbasMoney.Infra.csproj", "{F804BFF6-3FAD-4D1E-B268-E8FCCA9F44F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23C8A953-19C7-40F4-903D-53E8BA015C35} = {23C8A953-19C7-40F4-903D-53E8BA015C35}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JarbasMoney.Shared", "JarbasMoney.Shared\JarbasMoney.Shared.csproj", "{DFF476F1-6E33-4074-B499-FF59BD3FE6AD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JarbasMoney.Api", "JarbasMoney.Api\JarbasMoney.Api.csproj", "{FF2326DD-8D3A-492E-8DBA-2E71574E5C30}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23C8A953-19C7-40F4-903D-53E8BA015C35} = {23C8A953-19C7-40F4-903D-53E8BA015C35}
+		{DFF476F1-6E33-4074-B499-FF59BD3FE6AD} = {DFF476F1-6E33-4074-B499-FF59BD3FE6AD}
+		{F804BFF6-3FAD-4D1E-B268-E8FCCA9F44F9} = {F804BFF6-3FAD-4D1E-B268-E8FCCA9F44F9}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarbasMoney.Tests", "JarbasMoney.Tests\JarbasMoney.Tests.csproj", "{A3B73E51-8768-418E-8B7B-23F0D88F17D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JarbasMoney.Tests", "JarbasMoney.Tests\JarbasMoney.Tests.csproj", "{A3B73E51-8768-418E-8B7B-23F0D88F17D8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23C8A953-19C7-40F4-903D-53E8BA015C35} = {23C8A953-19C7-40F4-903D-53E8BA015C35}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

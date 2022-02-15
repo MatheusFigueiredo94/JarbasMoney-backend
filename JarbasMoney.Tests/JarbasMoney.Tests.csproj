@@ -13,4 +13,12 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CommandTests\" />
+    <Folder Include="EntityTests\" />
+    <Folder Include="HandlerTests\" />
+    <Folder Include="RepositoriesTests\" />
+    <Folder Include="QueryTests\" />
+  </ItemGroup>
+
 </Project>
