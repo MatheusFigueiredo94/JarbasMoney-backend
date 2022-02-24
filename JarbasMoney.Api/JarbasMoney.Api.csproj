@@ -4,6 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>909b4e26-bf73-4f80-994e-e5dd7a2f8973</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <StartupObject>JarbasMoney.Api.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
