@@ -37,7 +37,7 @@ namespace JarbasMoney.Api
             services.AddTransient<IStockRepository, StockRepository>();
             //services.AddTransient<TodoHandler, TodoHandler>();
 
-
+            services.AddCors();
 
             services.AddSwaggerGen(c =>
             {
@@ -59,9 +59,10 @@ namespace JarbasMoney.Api
 
             app.UseRouting();
             app.UseCors(x => x
-                .AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader());
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials());
 
             app.UseAuthorization();
 
