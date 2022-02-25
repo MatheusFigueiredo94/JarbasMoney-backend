@@ -1,7 +1,11 @@
+using JarbasMoney.Domain.Repositories;
+using JarbasMoney.Infra.Contexts;
+using JarbasMoney.Infra.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +32,13 @@ namespace JarbasMoney.Api
         {
 
             services.AddControllers();
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
+
+            services.AddTransient<IStockRepository, StockRepository>();
+            //services.AddTransient<TodoHandler, TodoHandler>();
+
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "JarbasMoney.Api", Version = "v1" });
@@ -47,6 +58,10 @@ namespace JarbasMoney.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseAuthorization();
 

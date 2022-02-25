@@ -6,9 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Handlers\" />
-    <Folder Include="Commands\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="2.0.5" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
   </ItemGroup>
 
 </Project>
