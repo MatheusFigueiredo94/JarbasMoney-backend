@@ -5,7 +5,7 @@ namespace JarbasMoney.Domain.Repositories
 {
     public interface IStockRepository
     {
-        IEnumerable<Stock> GetAll();
+        List<Stock> GetAll();
 
     }
 }

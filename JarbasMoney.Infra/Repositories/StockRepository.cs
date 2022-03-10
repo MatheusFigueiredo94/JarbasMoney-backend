@@ -21,11 +21,11 @@ namespace JarbasMoney.Infra.Repositories
             _context = context;
         }
 
-        public IEnumerable<Stock> GetAll()
+        public List<Stock> GetAll()
         {
-            return _context.Stocks
-               .AsNoTracking()
-               .Where(StockQueries.GetAll())
+            return _context.Stocks.ToList();
+               
+               //.Where(StockQueries.GetAll())
                ;
         }
 

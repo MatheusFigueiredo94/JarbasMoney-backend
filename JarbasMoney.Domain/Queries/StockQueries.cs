@@ -10,7 +10,7 @@ namespace JarbasMoney.Domain.Queries
 
         public static Expression<Func<Stock, bool>> GetAll()
         {
-            return x => x.StockCode == "OIBR3";
+            return x => x == x;
         }
     }
 }

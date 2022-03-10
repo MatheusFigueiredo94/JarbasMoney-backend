@@ -6,15 +6,15 @@ namespace JarbasMoney.Domain.Commands
     {
         public GenericCommandResult() { }
 
-        public GenericCommandResult(bool success, string message, object data)
+        public GenericCommandResult(bool success, string message, object content)
         {
             Success = success;
             Message = message;
-            Data = data;
+            Content = content;
         }
 
         public bool Success { get; set; }
         public string Message { get; set; }
-        public object Data { get; set; }
+        public object Content { get; set; }
     }
 }

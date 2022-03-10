@@ -14,7 +14,7 @@ namespace JarbasMoney.Api.Controllers
     {
         [Route("")]
         [HttpGet]
-        public IEnumerable<Stock> GetAll(
+        public List<Stock> GetAll(
             [FromServices] IStockRepository repository
         )
         {
